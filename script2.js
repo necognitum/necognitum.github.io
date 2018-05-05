@@ -227,7 +227,40 @@ function startQuiz() {
 	var variant = document.querySelector('.select').selectedIndex;
 	console.log(variant);
 	var varfile;
-	
+	switch(variant) {
+		case 0:
+			varfile = 'pulm.json';
+			break;
+		case 1:
+			varfile = 'ibs.json';
+			break;
+		case 2:
+			varfile = 'gbreum.json';
+			break;
+		case 3:
+			varfile = 'klsn.json';
+			break;
+		case 4:
+			varfile = 'gdcp.json';
+			break;
+		case 5:
+			varfile = 'hep.json';
+			break;
+		case 6:
+			varfile = 'nephr.json';
+			break;
+	}
+	var xhr = new XMLHttpRequest();
+	var xhrre;
+	xhr.open('GET', varfile, false);
+	xhr.send();
+	if (xhr.status != 200) {
+	  test = tests.tests;
+	  alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+	} else {
+	  xhrre = JSON.parse(xhr.responseText);
+	  test = xhrre.tests;
+	}
 	if (document.querySelector(".checkbox").checked === true) {
 	test = shuffle(test);
 	}
