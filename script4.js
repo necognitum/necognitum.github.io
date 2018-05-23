@@ -1372,7 +1372,7 @@ function drawEnd() {
 	document.querySelector('.question__name').innerHTML = "РЕЗУЛЬТАТ";
 	document.querySelector(".result").removeAttribute('hidden');
 	document.querySelector(".bblock").removeAttribute('hidden');
-	document.querySelector(".bblcok__button1").addEventListener("click", function() {window.location.reload(false) });
+	document.querySelector(".bblcok__button1").addEventListener("click", function() {window.location.href = "index.html"});
 	document.querySelector(".bblcok__button3").addEventListener("click", function() {window.location.reload(false) });
 	var accuracy = right * 100 / iterGlobal;
 	document.querySelector('.result').innerHTML = Math.round(accuracy) + "%";
