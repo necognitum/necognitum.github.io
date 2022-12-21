@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="theme-color" content="#0c426f">
+	<meta charset="utf-8">
+	<title>Тесты БГМУ</title>
+	<link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <a class="header__back" href="#" style="display: none;">&lt;
+            </a>
+        	<div class="header__name">Тесты БГМУ
+        	</div>
+            <button class="header__search" style="display: none;">
+            </button>
+            <input type="text" class="header__searchform">
+        </div>
+        <div class="items">
+            <a class="items__item" href="/anat/">Анатомия</a>
+            <a class="items__item" href="/hist/">Гистология</a>
+            <a class="items__item" href="/nf/">Нормальная физиология</a>
+            <a class="items__item" href="/microbio/">Микробиология</a>
+            <a class="items__item" href="/patan/">Патологическая анатомия</a>
+            <a class="items__item" href="/patfiz/">Патологическая физиология</a>
+            <a class="items__item" href="/pharm1/">Фармакология №1</a>
+            <a class="items__item" href="/pharm2/">Фармакология №2</a>
+            <a class="items__item" href="/oph/">Оперативная хирургия</a>
+            <a class="items__item" href="/ft/">Факультетская терапия</a>
+            <a class="items__item" href="/sd/">Сертификат медсестры</a>
+        </div>
+    </div>
+    <div style="text-align: center; padding-top: 20px; color: #0C426F;">
+    <a href="https://vk.com/osmanovic?w=wall17742477_5526" target="_blank" style="color: #fff; font-weight: bold;">Пожертвовать на развитие сайта</a></div>
+    <div style="text-align: center; padding-top: 20px; color: #0C426F;">
+    <a href="https://vk.com/osmanovic" target="_blank" style="color: #fff; padding-top: 5px;">2017 ©Osmanovich Aron</a></div>
+    <div style="text-align: center; padding-top: 20px; color: #0C426F;">
+    <a href="http://old.cognitum.ru" style="color: #fff; padding-top: 5px;">ПЕРЕЙТИ НА СТАРЫЙ САЙТ</a></div>
+    <script type="text/javascript" src="list.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28817315-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    var oToday = new Date();
+
+function getDaysLeft(oDeadLineDate, oToday){
+  return oDeadLineDate > oToday ? Math.ceil((oDeadLineDate - oToday) / (1000 * 60 * 60 * 24)) : null;
+}
+
+function MkDaysLeft(sDeadLineDate, sDeadLineText){
+  var sTime = sDeadLineDate + " " + oToday.getHours() + ":" + oToday.getMinutes() + ":" + oToday.getSeconds();
+  var oDeadLineDate = new Date(sTime);
+  var nDaysLeft = getDaysLeft(oDeadLineDate, oToday);
+  if (nDaysLeft){
+    var sDaysLeft = String(nDaysLeft);
+    var sDaysText = "дней";
+    var nDaysLeftLength = sDaysLeft.length;
+    if (sDaysLeft.charAt(nDaysLeftLength - 2) != "1"){
+      if (sDaysLeft.charAt(nDaysLeftLength - 1) == "2" || sDaysLeft.charAt(nDaysLeftLength - 1) == "3" || sDaysLeft.charAt(nDaysLeftLength - 1) == "4") sDaysText = "дня";
+      else if (sDaysLeft.charAt(nDaysLeftLength - 1) == "1") sDaysText = "день";
+    }
+    var sLeftText = sDaysText == "день" ? "остался" : "осталось";
+    return sDeadLineText + " " + sLeftText + " " + nDaysLeft + " " + sDaysText + ".";
+  }else return "СЕССИЯ НАСТУПИЛА";
+}
+window.onload = function() {
+document.querySelector(".status-timer").innerHTML = MkDaysLeft("January 15, 2018", "До сессии");
+}
+</script>
+</body>
+</html>
