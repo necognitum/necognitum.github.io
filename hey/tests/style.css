@@ -1,0 +1,248 @@
+div {
+
+	font-family: Verdana;
+	color: #333;
+}
+body {
+	/*background-color: #EDEDED;*/
+	background-color: #FFF;
+	padding: 0px;
+	margin: 0px;
+}
+.body {
+	max-width: 720px;
+	margin: 0 auto 0 auto;
+	padding: 5px;
+	background-color: #FFF;
+	text-align: center;
+}
+.status-timer {
+	border-width: 0px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	font-size: 12px;
+	color: #FFF;
+}
+.status {
+	display: none;
+	border-width: 0px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+}
+.status__index {
+	border-width: 0px;
+	display: inline-block;
+	font-size: 12px;
+	text-align: left;
+	float: left;
+	margin: 0;
+	padding: auto 0 auto 0;
+}
+.status__accuracy {
+	border-width: 0px;
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	margin: 0;
+	font-size: 8pt;
+}
+.status__time {
+	border-width: 0px;
+	display: inline-block;
+	text-align: right;
+	float: right;
+	font-size: 12px;
+	margin: 0;
+	font-size: 8pt;
+}
+.question {
+	
+	border-width: 0px;
+	border-color: white;
+	background-color: #FFF;
+	margin: 5px;
+	padding: 5px;
+	border-top: 15px solid #FFF;
+	border-bottom: 15px solid #FFF;
+}
+.question__name {
+	border-width: 0px;
+	text-align: center;
+	color: #333;
+	font-size: 12pt;
+	margin: 5px;
+	padding: 5px
+}
+.answers {
+	margin: 5px;
+	padding: 0;
+	border-width: 0;
+}
+.answers__answer {
+	border-width: 0px;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+	font-size: 12pt;
+	padding: 15px;
+	margin: 5px 0 5px 0;
+	cursor: pointer;
+}
+.answers__answer_unselected:hover {
+	background-color: #EEE;
+}
+.answers__answer_selected {
+	background-color: #65c0e4;
+	color: white;
+}
+.answers__answer_right {
+	border-right: 25px solid green;
+	border-left: 25px solid green;
+}
+.checkbox-wrapper {
+	display: block;
+	font-size: 18px;
+	padding-bottom: 25px;
+}
+.button {
+	background-color:#DDD;
+	color: #333;
+	border-radius: 5px;
+	margin: 5px;
+	text-align: center;
+	font-size: 24pt;
+	height: 70px;
+	line-height: 70px;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: #0096D2;
+	color: #fff;
+}
+.select {
+	margin: 5px;
+	font-size: 24px;
+	text-align: center;
+	max-width: 600px;
+	display: none;
+}
+.select__option {
+	font-size: 18px;
+}
+.result {
+	margin: 5px;
+	font-size: 28pt;
+	padding-bottom: 25px;
+}
+.bblock {
+	margin: 5px;
+	padding-bottom: 10px;
+}
+.bblcok__button1 {
+	line-height: 40px;
+	height: 40px;
+	background-color: #0096D2;
+	display: inline-block;
+	width: 30%;
+	font-size: 12pt;
+	vertical-align: top;
+	cursor: pointer;
+	color: #FFF;
+}
+.bblcok__button3 {
+	line-height: 40px;
+	height: 40px;
+	background-color: #0096D2;
+	display: inline-block;
+	width: 30%;
+	font-size: 12pt;
+	vertical-align: top;
+	cursor: pointer;
+	color: #FFF;
+}
+.bblcok__button2 {
+	line-height: 40px;
+	background-color: #0096D2;
+	display: inline-block;
+	width: 30%;
+	font-size: 12pt;
+	height: 40px;
+	cursor: pointer;
+	color: #FFF;
+}
+.bblcok__button2_inactive {
+	background-color: gray;
+	cursor: default;
+}
+
+.total-name{
+	text-align: center;
+    color: #333;
+	font-size: 60px;
+	padding-bottom: 30px;
+}
+
+
+  .link-to-me {
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5px;
+    color: #333333;
+  }
+  .link-button.btn {
+	text-decoration: none;
+    margin-top: 30px;
+    color: #333333;
+    border-radius: 0;
+    text-transform: uppercase;
+    white-space: normal !important;
+    max-width: 250px;
+	width: 250px;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+	border-radius: 4px;
+	
+}
+
+.link-button.btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+@media screen and (max-width: 360px) {
+	.status__time, .status__accuracy, .status__index, .status-timer {
+		font-size: 6pt;
+	}
+	.answers__answer, .question__name {
+		font-size: 8pt;
+	}
+}
+p {
+    display: block;
+    text-align: center;
+}
+.baba{
+	display: inline;
+	padding-left: 80px;
+    
+}
